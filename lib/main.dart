@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uolo_demo/screens/dashboard/dashboard.dart';
+import 'package:uolo_demo/screens/dashboard/ui/home_page.dart';
 import 'package:uolo_demo/screens/login/login.dart';
 
 void main() {
@@ -14,13 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
       routes: {
-        '/': (_) => ScreenLogin(),
-        '/dashboard': (_) => ScreenDashboard()
+        '/': (_) => const ScreenLogin(),
+        '/dashboard': (_) => HomePage()
       },
     );
   }
